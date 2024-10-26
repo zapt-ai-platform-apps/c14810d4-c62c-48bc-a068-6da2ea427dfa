@@ -1,15 +1,16 @@
 {
   "name": "new-app",
   "version": "1.0.0",
-  "description": "New App",
+  "description": "A Quran reader app built with SolidJS and Tailwind CSS",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.8.22"
+    "solid-js": "^1.8.22",
+    "@solidjs/router": "^0.8.4"
   },
   "devDependencies": {
     "vite": "^5.4.7",

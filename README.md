@@ -2,38 +2,70 @@
 
 ## Overview
 
-New App is a web application that displays important Arabic text in a beautifully designed and user-friendly interface.
+New App is a Quran reader application that allows users to read the Quran in Arabic with English translation. Users can browse through the list of Surahs (chapters), select any Surah to view its Ayahs (verses), and read them along with their translations.
 
-## User Journey
+## User Journeys
 
-1. **Access the App**: The user opens the web application in their browser.
+### 1. Viewing the List of Surahs
 
-2. **Read the Content**: The user is presented with the Arabic text displayed prominently in the center of the screen. The text is formatted for readability, with clear typography and adequate spacing.
+- **Step 1:** Upon opening the app, users are presented with a list of all 114 Surahs of the Quran.
+- **Step 2:** Each Surah displays its number, English name, and Arabic name.
+- **Step 3:** Users can scroll through the list to find a Surah they wish to read.
 
-3. **Navigate Through Text**: The content is organized into paragraphs, allowing the user to read through each section comfortably.
+### 2. Selecting a Surah
 
-4. **Responsive Design**: The app adjusts seamlessly to different screen sizes, ensuring a pleasant reading experience on desktops, tablets, and mobile devices.
+- **Step 1:** Users select a Surah by clicking on it from the list.
+- **Step 2:** The selected Surah is highlighted to indicate selection.
+- **Step 3:** The app fetches and displays the Ayahs (verses) of the selected Surah.
 
-## Features
+### 3. Reading Ayahs
 
-- **Right-to-Left Text Support**: The application properly displays Arabic text with right-to-left layout direction.
+- **Step 1:** Users can read the Ayahs in Arabic script, displayed prominently.
+- **Step 2:** Below each Arabic Ayah, the English translation is provided.
+- **Step 3:** Users can scroll through the Ayahs to read the entire Surah.
 
-- **Responsive Layout**: The interface adjusts to various screen sizes, providing an optimal viewing experience on any device.
+### 4. Switching Surahs
 
-- **Beautiful Design**: With a gradient background and well-designed typography, the app offers an aesthetically pleasing environment for reading.
+- **Step 1:** Users can return to the Surah list at any time.
+- **Step 2:** Users select a different Surah from the list.
+- **Step 3:** The app updates to display the Ayahs of the newly selected Surah.
 
-## How to Use
+## External APIs Used
 
-- Simply open the app in your preferred web browser.
+The app uses the [Al Quran Cloud API](https://alquran.cloud/api) to fetch Quranic text and translations.
 
-- Scroll through the content to read all the provided text.
+- **Purpose:** To retrieve the list of Surahs and the Ayahs for each Surah in both Arabic and English translation.
+- **Endpoint Examples:**
+  - Fetch list of Surahs: `https://api.alquran.cloud/v1/surah`
+  - Fetch Ayahs of a Surah: `https://api.alquran.cloud/v1/surah/{surah_number}/editions/quran-uthmani,en.asad`
 
-- The app does not require any user interaction beyond reading; there are no buttons or inputs.
+## Technologies Used
 
-## External Services
+- **SolidJS:** A reactive JavaScript library for building user interfaces.
+- **Tailwind CSS:** A utility-first CSS framework for styling.
+- **Vite:** A build tool that provides a fast development environment.
+- **Al Quran Cloud API:** For fetching Quranic data.
 
-- **Progressier**: The app uses Progressier to add Progressive Web App (PWA) functionality, allowing users to install the app on their devices for offline access.
+## Environment Variables
 
-## Note
+No environment variables are required for this app.
 
-- This application is free to use and does not require any authentication or sign-in.
+## Running the App
+
+1. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+2. Start the development server:
+
+   ```
+   npm run dev
+   ```
+
+3. Open the app in your browser at `http://localhost:3000`.
+
+---
+
+This app is free to use and does not require authentication.
